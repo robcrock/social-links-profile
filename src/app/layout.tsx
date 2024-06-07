@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import localFont from "@next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = localFont({
+  src: "../../public/assets/fonts/inter-variable.ttf",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | Social links profile",
@@ -16,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} font-sans`}>
       <Head>
         <meta
           name="viewport"
