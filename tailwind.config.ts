@@ -7,33 +7,33 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      black: "#141414",
-      offBlack: "#1f1f1f",
-      grey: "#333333",
-      white: "#ffffff",
-      green: "#c4f82a",
-    },
-    fontSize: {
-      base: "0.875rem",
-      lg: "1.5rem",
-    },
     fontFamily: {
-      inter: "Inter",
-    },
-    borderRadius: {
-      "rounded-0": "0rem",
-      "rounded-1": "0.5714285714285714rem",
-      "rounded-2": "0.8571428571428571rem",
-      "rounded-3": "71.35714285714286rem",
-    },
-    screens: {
-      m: "375px",
-      d: "1440px",
+      sans: ["var(--font-inter)"],
     },
     extend: {
+      colors: {
+        black: "#141414",
+        offBlack: "#1f1f1f",
+        grey: "#333333",
+        white: "#ffffff",
+        green: "#c4f82a",
+      },
+      fontSize: {
+        base: "0.875rem",
+        lg: "1.5rem",
+      },
       fontFamily: {
-        sans: ["var(--font-inter)"],
+        inter: "Inter",
+      },
+      borderRadius: {
+        "rounded-0": "0rem",
+        "rounded-1": "0.5714285714285714rem",
+        "rounded-2": "0.8571428571428571rem",
+        "rounded-3": "71.35714285714286rem",
+      },
+      screens: {
+        m: "375px",
+        desktop: "1440px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
