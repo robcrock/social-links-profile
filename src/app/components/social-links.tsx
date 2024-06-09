@@ -1,3 +1,7 @@
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+
 type TLink = {
   app: string;
   link: string;
@@ -11,11 +15,16 @@ export const SocialLinks = ({ links }: TProps) => {
     <ul className="flex w-full flex-col gap-4">
       {links.map((link) => {
         return (
-          <li
-            key={link.app}
-            className="bg-grey align-center flex h-[45px] items-center justify-center rounded-lg text-base"
-          >
-            {link.app}
+          <li key={link.app}>
+            <Link
+              className={cn(
+                buttonVariants({ variant: "outline" }),
+                "bg-grey w-full",
+              )}
+              href={link.link}
+            >
+              {link.app}
+            </Link>
           </li>
         );
       })}
